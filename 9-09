@@ -1,0 +1,148 @@
+// let rows=5;
+// for(i=1;i<rows;i++){
+//     s=" "
+//     for(sp=1;sp<rows-i;sp++){
+//         s=s+" "
+//     }
+//     for(j=1;j<i;j++){
+//         s=s+"*"+" "
+//     }
+// }
+// console.log(s);
+
+// var rows=4;
+// for(i=1;i<2*rows-1;i++){
+//     s=""
+//     code=97
+//     space=(i<=rows)? rows-i:i-rows;
+//     cols=(i<=rows)? i:2*rows-i
+//     for(sp=1;sp<=space;sp++){
+//         s=s+" "
+//     }
+//     for(j=1;j<=cols;j++){
+//   if(j==1||j==i||j==2*rows-i ||i==1){
+//     s=s+String.fromCharCode(code)+" "
+//     code++
+//   }else{
+//     s=s+" "+" "
+//     code++
+//   }
+//     }console.log(s);
+
+//     }
+
+
+// 1 2 3 4 
+//  1   3
+//   1 2
+//    1
+//   2 1
+//  3   1
+// 4 3 2 1
+
+// let rows=5
+// for(i=1;i<=2*rows-1;i++){
+//     s=""
+
+//     space= i<=rows?i-1:2*rows-i-1
+//     cols=  i<=rows?rows-i+1:i-rows+1
+
+//     for(sp=1;sp<=space;sp++){
+//         s=s+" "
+//     }
+//     if(i<=rows){
+//     for(j=1;j<=cols;j++){
+//         if(i==1||j==1||j==cols){
+//             s=s+j+" "
+//         }else{
+//             s=s+" "+" "
+//         }
+//     }
+// }
+//    else {
+//       for (let j = 1; j <= cols; j++) {
+//         if (j == 1 || i==2*rows-1 ||  j == cols) {
+//           s += cols-j +1+ " ";
+//         } else {
+//           s += "  ";
+//         }
+//       }
+//     }
+
+//     console.log(s)
+// }
+
+
+// let rows=5;
+
+// for(i=rows;i>=1;i--){
+//     s=" "
+//    for(sp=1;sp<=rows-i;sp++){
+//     s=s+" "
+//    } 
+//    for(j=1;j<=i;j++){
+
+//     if(i==rows||j==1||j==i){
+//         s=s+j+" "
+//     }else{
+//         s=s+" "+" "
+//     }
+//    }
+//    console.log(s)
+// }
+
+// for(i=2;i<=rows;i++){
+//     s=" "
+//    for(sp=1;sp<=rows-i;sp++){
+//     s=s+" "
+//    } 
+//    for(j=1;j<=i;j++){
+
+//     if(i==rows||j==1||j==i){
+       
+//          s+=(rows-j)+(i-rows+1)+" "
+      
+       
+       
+//     }else{
+//        s=s+" "+" "
+//     }
+//    }
+//    console.log(s)
+// }
+
+//  let rows=5;
+//  for(i=1;i<=rows;i++){
+//     s=" "
+//     for(sp=1;sp<=i-rows;sp++){
+//         s=s+" "
+//     }
+//     for(j=1;j<=i;j++){
+//         s=s+"*"+" "
+//     }
+//     console.log(s);
+//  }
+
+//  for(i=rows-1;i>=1;i--){
+//     s=" "
+//     for(sp=1;sp<=i-rows;sp++){
+//         s=s+" "
+//     }
+//     for(j=1;j<=i;j++){
+//         s=s+"*"+" "
+//     }
+//     console.log(s);
+//  }
+
+
+let rows=5;
+for(i=1;i<=rows;i++){
+    s=" "
+    for(sp=1;sp<=i-rows;sp++){
+        s=s+" "
+    }
+    for(j=1;j<=i;j++){
+        s=s+"*"+" "
+    }
+    console.log(s);
+}

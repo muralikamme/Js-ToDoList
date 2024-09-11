@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" value="">
+    <input type="submit" id="submit" value="Register">
+
+
+
+    <script>
+
+        var get_btn=document.getElementById("submit")
+        get_btn.addEventListener("click",()=>{
+
+
+            var get_input=document.getElementById("name").value;
+
+
+            localStorage.setItem("name",get_input);
+
+       document.getElementById("name").value=""
+
+       console.log(localStorage.getItem("name"));
+
+
+
+            
+            // var obj={
+            //     Name:get_input.value
+            // }
+            // for(var data in obj){
+            //     localStorage.setItem("dat")
+            // }
+            
+        })
+    </script>
+
+
+
+
+</body>
+</html>

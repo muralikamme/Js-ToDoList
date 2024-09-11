@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <form id="frm">
+        <input type="text" value="" id="name" placeholder="username"><br><br>
+        <input type="text" value="" id="surname" placeholder="surname"><br><br>
+        <input type="text" value ="" id="email" placeholder="Email"><br><br>
+        <input type="text" value="" id="mobile" placeholder="Mobile Number"><br><br>
+        <input type="submit" value="Register" id="submit">
+    </form>
+
+    <!-- This div will hold the printed values -->
+    <div id="output"></div>
+
+    <script>
+        var get_submit = document.getElementById("submit");
+  arr=[]
+        get_submit.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            // Getting the values of input fields
+            var get_name = document.getElementById("name").value;
+            var get_surname = document.getElementById("surname").value;
+            var get_email = document.getElementById("email").value;
+            var get_mobile = document.getElementById("mobile").value;
+
+
+            // Storing each value in localStorage individually
+            localStorage.setItem('name', get_name);
+            localStorage.setItem('surname', get_surname);
+            localStorage.setItem('email', get_email);
+            localStorage.setItem('mobile', get_mobile);
+
+            // Clear the form after storing
+            document.getElementById("name").value = "";
+            document.getElementById("surname").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("mobile").value = "";
+
+            // Alert to indicate data is stored in localStorage
+            // alert("Data stored in localStorage!");
+
+
+            // console.log(localStorage.getItem('name'));
+            // console.log(localStorage.getItem('surname'));
+            // console.log(localStorage.getItem('email'));
+            // console.log(localStorage.getItem('mobile'));
+            // Display stored data on the page
+            var output = document.getElementById('output');
+            output.innerHTML = `<p>Name: ${localStorage.getItem('name')}</p>
+                                <p>Surname: ${localStorage.getItem('surname')}</p>
+                                <p>Email: ${localStorage.getItem('email')}</p>
+                                <p>Mobile: ${localStorage.getItem('mobile')}</p>
+                                <button id="btn">x</button>`;
+               
+              arr.push(output.innerText)  
+              var get_frm=document.getElementById("frm") 
+              get_frm.remove()  ;  
+               
+             btn.addEventListener("click",()=>{
+                output.remove();
+             })
+              
+        });
+
+        document.body.append(arr)
+              
+        
+    </script>
+</body>
+</html>

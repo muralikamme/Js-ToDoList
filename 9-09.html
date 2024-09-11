@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" value="" id="name" placeholder="username"><br><br>
+        <input type="text" value="" id="surname" placeholder="surname"><br><br>
+        <input type="text" value ="" id="email" placeholder="Email"><br><br>
+        <input type="text" value="" id="mobile" placeholder="Mobile Number"><br><br>
+       
+        <input type="submit" value="Register" id="submit">
+    </form>
+
+
+    <script>
+        var get_submit=document.getElementById("submit");
+     let arr=[];
+        get_submit.addEventListener("click",(event)=>{
+            event.preventDefault()
+
+            var get_name=document.getElementById("name");
+            var get_surname=document.getElementById("surname");
+            var get_email=document.getElementById("email");
+            var get_mobile=document.getElementById("mobile");
+          
+           
+            
+            
+            
+              console.log(get_name.value,get_surname.value,get_email.value,get_mobile.value)
+             var obj_data={
+                Name: get_name.value,
+                SurName:get_surname.value,
+                Email:get_email.value,
+                Mobile:get_mobile.value,
+               
+               
+                
+
+             }
+             for(var i in obj_data){
+                var get_div=document.createElement("div")
+               get_div.innerText=obj_data[i]
+               arr.push(obj_data)
+               document.body.append(get_div,crt_btn)
+               var crt_btn=document.createElement("button");
+          crt_btn.innerText="X"
+          
+
+           
+          }
+          
+    
+             
+               
+        get_name.value=""
+        get_surname.value=""
+        get_email.value=""
+        get_mobile.value=""
+       
+         
+          })
+          
+             
+             
+   
+          
+
+       
+       
+
+
+    </script>
+</body>
+</html>

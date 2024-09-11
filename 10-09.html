@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Main_div {
+            max-width: 100px;
+            max-width: 100px;
+            border: 2px solid green;
+        }
+        .delete_button{
+            margin-left: 120px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <input type="text" placeholder="Enter User name" id="user_name">
+    <input type="password" placeholder="Enter the user password" id="password">
+    <input type="text" placeholder="Enter ther location" id="location">
+    <input type="number" placeholder="Enter the mobile number" id="mobile_number">
+    <input type="button" id="submit" value="Add Text">
+
+
+    <script>
+
+
+        // to get the button
+        const button = document.getElementById("submit");
+
+        // create a empty array
+
+        // const arr = []
+        // addEventListenr
+
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            // create the div 
+            const div_cre = document.createElement("div");
+            div_cre.className = "Main_div"
+
+            const para1_cre = document.createElement("p");
+            const para2_cre = document.createElement("p");
+            const para3_cre = document.createElement("p");
+            const para4_cre = document.createElement("p");
+
+            // get the input boxes
+            const input_user = document.getElementById("user_name");
+            const input_password = document.getElementById("password");
+            const input_location = document.getElementById("location");
+            const input_mobile = document.getElementById("mobile_number");
+
+            para1_cre.innerText = `User_Name: ${input_user.value}`;
+            para2_cre.innerText = `User_Password:${input_password.value}`;
+            para3_cre.innerHTML = `User_Location: ${input_location.value}`;
+            para4_cre.innerHTML = `User_Mobie:${input_mobile.value}`;
+
+
+            // create the delete button and edit button
+
+            const button_cre = document.createElement("button");
+            button_cre.innerText = "X";
+            button_cre.className = "delete_button"
+
+            // addEventListener
+            button_cre.addEventListener("click", () => {
+                button_cre.remove();
+                para1_cre.remove();
+                para2_cre.remove();
+                para3_cre.remove();
+                para4_cre.remove();
+                div_cre.remove();
+
+            })
+
+
+
+
+
+
+            input_user.value = ""
+            input_password.value = ""
+            input_location.value = ""
+            input_mobile.value = ""
+            // appen para to body inside the addEventListener
+            div_cre.append(para1_cre, para2_cre, para3_cre, para4_cre,button_cre)
+            document.body.appendChild(div_cre)
+
+
+
+
+
+
+
+
+            // create a empty object
+            // const obj = {
+            //     user_name: input_user.value,
+            //     user_password: input_password,
+            //     user_city: input_location,
+            //     user_mobile: input_mobile.value
+            // }
+            // console.log(obj);
+            // arr.push(obj)
+            // console.log(arr);
+
+
+        })
+
+    </script>
+</body>
+
+</html>

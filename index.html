@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            
+            height: max-content;
+            display: flex;
+            background-color: rgb(134, 131, 81);
+           
+           
+           
+        }
+        div{
+            margin-left: 20px;
+            border:3px solid;
+            max-width: 200px;
+            padding: 20px;
+            display: inline;
+            background-color: rgb(219, 181, 181);
+            height: 200px;
+            
+
+
+        }
+      
+         
+      
+
+       #frm {
+         margin-left: 600px;
+         margin-top: 200px;
+        
+
+        }
+       #name,#surname,#password,#email,#mobile {
+       
+        width: 200px;
+        height: 30px;
+        border: 2px solid;
+        border-radius: 5px;
+        
+
+
+        }
+       #btn {
+        width: 100px;
+        padding: 5px;
+        border-radius: 3px;
+        background-color: rgb(43, 4, 240);
+        color: white;
+
+        }
+
+    
+       
+    </style>
+</head>
+<body>
+    <form id="frm">
+        <input type="text" id="name" value="" placeholder="username"><br><br>
+        <input type="text" id="surname" value=""placeholder="Surname"><br><br>
+        <input type="password" id="password" value="" placeholder="Password"><br><br>
+        <input type="email" id="email" value="" placeholder="Email"><br><br>
+        <input type="text" id="mobile" value="" placeholder="Mobile"><br><br>
+        <input type="submit" id="btn" value="Register">
+    </form>
+
+
+
+    <script>
+        var get_btn=document.getElementById("btn")
+        get_btn.addEventListener("click",(event)=>{
+            event.preventDefault();
+
+          //get the input forms
+            var get_name=document.getElementById("name")
+            var get_surname=document.getElementById("surname")
+            var get_pass=document.getElementById("password")
+            var get_email=document.getElementById("email")
+            var get_mobile=document.getElementById("mobile")
+   
+       // add value into paragraph tag 
+
+        var p1=document.createElement("p")
+        var p2=document.createElement("p")
+        var p3=document.createElement("p")
+        var p4=document.createElement("p")
+        var p5=document.createElement("p")
+
+       p1.innerText=`Name: ${get_name.value}`;
+       p2.innerText=`Surname:${get_surname.value}`;
+      p3.innerHTML=`Password:${get_pass.value}`;
+       p4.innerHTML=`Email:${get_email.value}`;
+        p5.innerHTML=`Mobile:${get_mobile.value}`
+     
+        var div_crt=document.createElement("div")
+        
+
+        var btn=document.createElement("button")
+        btn.innerText="x";
+        btn.addEventListener("click",()=>{
+            div_crt.remove()
+
+
+      
+        })
+        get_name.value=""
+      get_surname.value=""
+      get_pass.value=""
+      get_mobile.value=""
+      get_email.value=""
+
+       
+        
+        div_crt.append(p1,p2,p3,p4,p5,btn)
+        document.body.appendChild(div_crt)
+
+
+        })
+    </script>
+</body>
+</html>
